@@ -75,5 +75,30 @@ default:
 printf("\nOpcao invalida! Tente novamente.\n");
 }
 } while (opcao != 3);
-return 0;
+
+}
+int matricula;
+    char curso[100];
+} Aluno;
+
+void exibirAluno(Aluno aluno) {
+    printf("\n========== DADOS DO ALUNO ==========\n");
+    printf("Matricula: %d\n", aluno.matricula);
+    printf("Nome:      %s\n", aluno.nome);
+    printf("Idade:     %d anos\n", aluno.idade);
+    printf("Curso:     %s\n", aluno.curso);
+    printf("====================================\n");
+}
+
+int main() {
+    Aluno aluno;
+
+    aluno.matricula = 12345;
+    sprintf(aluno.nome, "Joao da Silva");
+    aluno.idade = 20;
+    sprintf(aluno.curso, "Sistemas de Informacao");
+
+    exibirAluno(aluno);
+
+    return 0;
 }
